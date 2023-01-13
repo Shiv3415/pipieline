@@ -9,7 +9,7 @@ pipeline {
     
      stage ("DEPLOY") {
       steps {
-        echo "this is deploy stage"
+        echo "this is deplo stage"
       }
     }
     
