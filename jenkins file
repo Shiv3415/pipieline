@@ -9,5 +9,21 @@ pipeline {
 					   '''
 				 }
 				}
+			stage('TEST PARALLEL') {
+				parallel {
+					stage("windos") {
+						steps {
+							echo "this is used to run on winodws"
+							sh '''
+								sleep 5
+							   '''
+						 }
+						}
+					stage("test on safari") {
+						steps {
+							echo "this is used to tun on windows"
+							sh sleep 5
+						}
+					}
 		}
 	}
