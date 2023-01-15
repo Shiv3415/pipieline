@@ -11,7 +11,7 @@ pipeline {
 				}
 			stage('TEST PARALLEL') {
 				parallel {
-					stage("windos") {
+					stage('windos') {
 						steps {
 							echo "this is used to run on winodws"
 							sh '''
@@ -19,7 +19,7 @@ pipeline {
 							   '''
 						 }
 						}
-					stage("test on safari") {
+					stage('test on safari') {
 						steps {
 							echo "this is used to tun on windows"
 							sh sleep 5
