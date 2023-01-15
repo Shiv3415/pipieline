@@ -1,7 +1,7 @@
 pipeline {
 	agent any;
 		stages {
-			stage {"BUILD"} {
+			stage {'BUILD'} {
 				steps {
 					echo "this is build stage"
 					sh '''
@@ -9,19 +9,19 @@ pipeline {
 					   '''
 				 }
 				}
-			stage {"test parallel"} {
+			stage {'test parallel'} {
 				parallel {
-					stage { "test in chrome" }
+					stage { 'test in chrome' }
 						steps {
-							echo {"this is test on chrome browser"
-							sh "sleep 5"
+							echo "this is test on chrome browser"
+							sh 'sleep 5'
 							
 							}
 						}
 					stage { "test in firefox" }
 						steps {
-							echo {"this is test on firefox browser"
-							sh "sleep 5;exit 1"
+							echo "this is test on firefox browser"
+							sh 'sleep 3'
 							
 							}
 						}
